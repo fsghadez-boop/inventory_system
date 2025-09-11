@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Sep 10, 2025 at 10:53 AM
+-- Generation Time: Sep 11, 2025 at 07:35 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -87,7 +87,15 @@ INSERT INTO `audit_logs` (`id`, `item_id`, `action`, `performed_by`, `log_detail
 (99, NULL, 'login', 2, 'User logged in', '2025-09-10 14:58:01'),
 (100, NULL, 'logout', 2, 'User logged out', '2025-09-10 14:58:06'),
 (101, NULL, 'login', 1, 'User logged in', '2025-09-10 14:58:09'),
-(102, NULL, '', 1, 'Added item test (Property: tests), Qty: 1 pieces, Status: brand_new', '2025-09-10 15:40:52');
+(102, NULL, '', 1, 'Added item test (Property: tests), Qty: 1 pieces, Status: brand_new', '2025-09-10 15:40:52'),
+(103, NULL, 'login', 1, 'User logged in', '2025-09-11 08:58:37'),
+(104, 12, 'edit', 1, 'Edited item wq', '2025-09-11 10:44:39'),
+(105, 12, 'edit', 1, 'Edited item wq', '2025-09-11 10:44:58'),
+(106, 1, 'edit', 1, 'Edited item 06-24-2025', '2025-09-11 10:45:04'),
+(107, 1, 'edit', 1, 'Edited item 06-24-2025', '2025-09-11 10:51:14'),
+(108, 1, 'edit', 1, 'Edited item 06-24-2025', '2025-09-11 10:51:24'),
+(109, 1, 'edit', 1, 'Edited item 06-24-2025', '2025-09-11 11:13:54'),
+(110, NULL, 'login', 1, 'User logged in', '2025-09-11 11:18:44');
 
 -- --------------------------------------------------------
 
@@ -228,8 +236,12 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `property_number`, `product_name`, `category_id`, `brand`, `model`, `processor`, `ram`, `graphics1`, `graphics2`, `computer_name`, `workgroup`, `os`, `office_app`, `ms_account`, `endpoint_protection`, `endpoint_updated`, `anydesk_id`, `belarc_installed`, `accounts_updated`, `ultravnc_installed`, `snmp_installed`, `connection_type`, `dhcp_type`, `static_app`, `ip_address1`, `ip_address2`, `lan_mac`, `wlan_mac1`, `wlan_mac2`, `gateway`, `office_id`, `miaa_property`, `memorandum_receipt`, `po_number`, `serial_number`, `display_size`, `printer_type`, `capacity_va`, `other_details`, `network_equipment_type`, `network_equipment_other`, `area_of_deployment`, `storage_type`, `storage_capacity`, `qr_code_path`, `quantity`, `unit`, `status`, `created_by`, `created_at`, `updated_at`, `is_active`) VALUES
-(1, '06-24-2025', 'a4tech', 7, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '../assets/qrcodes/06-24-2025.png', 4, 'pieces', 'brand_new', 1, '2025-09-08 15:01:18', '2025-09-10 10:23:12', 1),
-(9, '2323', '232', 18, '23', '24', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', 35, 'MIAA Property', 'wewe', 'we', 'w54e54we', '24', '', '', '', '', '', '', '', '', '../assets/qrcodes/2323.png', 0, 'pieces', 'brand_new', 1, '2025-09-10 15:54:15', '2025-09-10 15:54:15', 1);
+(1, '06-24-2025', 'a4tech', 7, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', '1', '../assets/qrcodes/06-24-2025.png', 6, 'pieces', 'brand_new', 1, '2025-09-08 15:01:18', '2025-09-11 11:13:54', 1),
+(9, '2323', '232', 18, '23', '24', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', 35, 'MIAA Property', 'wewe', 'we', 'w54e54we', '24', '', '', '', '', '', '', '', '', '../assets/qrcodes/2323.png', 0, 'pieces', 'brand_new', 1, '2025-09-10 15:54:15', '2025-09-10 15:54:15', 1),
+(10, 'w', 'w', 18, 'q', 'q', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', 37, 'MIAA Property', '2', '2', '2', '24', '', '', '', '', '', '', '', '', '../assets/qrcodes/w.png', 0, 'pieces', 'brand_new', 1, '2025-09-11 10:32:00', '2025-09-11 10:32:00', 1),
+(11, 'www', 'ww', 18, 'w', 'w', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', 37, 'MIAA Property', 'w', 'w', 'w', '24', '', '', '', '', '', '', '', '', '../assets/qrcodes/www.png', 0, 'pieces', 'brand_new', 1, '2025-09-11 10:39:38', '2025-09-11 10:39:38', 1),
+(12, 'wq', 'w', 18, 'w', 'w', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', 37, 'MIAA Property', 'w', 'w', 'w', '24', '', '', '', '', '', '', '', '', '../assets/qrcodes/wq.png', 1, 'pieces', 'brand_new', 1, '2025-09-11 10:42:21', '2025-09-11 10:44:58', 1),
+(13, 'monitor', 'www', 18, 'qwe', 'qwe', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', 15, 'MIAA Property', 'wqe', '2', 'qwe2', '24', '', '', '', '', '', '', '', '', '../assets/qrcodes/monitor.png', 1, 'pieces', 'brand_new', 1, '2025-09-11 11:19:07', '2025-09-11 11:19:07', 1);
 
 -- --------------------------------------------------------
 
@@ -468,7 +480,7 @@ ALTER TABLE `user_holdings`
 -- AUTO_INCREMENT for table `audit_logs`
 --
 ALTER TABLE `audit_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -492,7 +504,7 @@ ALTER TABLE `inventory_item_tracker`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `item_status_logs`
