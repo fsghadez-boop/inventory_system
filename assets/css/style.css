@@ -1,0 +1,6 @@
+/* You can put this in style.css, but we'll include Bootstrap via CDN */
+body {
+    padding-top: 60px;
+}
+.table th, .table td { vertical-align: middle !important; }
+.qrcode-img { width:70px; height:auto; }
